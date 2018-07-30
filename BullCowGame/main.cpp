@@ -9,7 +9,7 @@ int main()
 	cout << "Hello and welcome to myshit\n";
 	cout << "Take a dumb guess at a " << WORD_LENGTH << "-letter isogram, asshole!\n";
 
-	string Guess = "";
+	string Guess;
 	cout << "Guess: ";
 	cin >> Guess;
 

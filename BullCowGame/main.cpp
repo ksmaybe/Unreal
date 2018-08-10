@@ -65,6 +65,6 @@ int main()
 		PlayGame();
 	} while (AskToPlayAgain());
 
-	
+	std::cout << "Hello!";
 	return 0;
 }

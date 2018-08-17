@@ -11,8 +11,8 @@ FBullCowGame BCGame;
 
 void PrintIntro()
 {
-	constexpr int32 WORD_LENGTH = 9;
-	std::cout << "Hello and welcome to Bulls and Cow, a fun word game.\n";
+	const int32 WORD_LENGTH = BCGame.GetHiddenWordLength();
+	std::cout << "Hello and welcome to Bulls and Cows, a fun word game.\n";
 	std::cout << "Take a dumb guess at a " << WORD_LENGTH << "-letter isogram, asshole!\n";
 	std::cout << std::endl;
 }

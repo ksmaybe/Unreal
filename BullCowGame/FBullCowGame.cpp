@@ -4,6 +4,7 @@
 FBullCowGame::FBullCowGame()
 {
 	Reset();
+
 }
 
 void FBullCowGame::Reset()

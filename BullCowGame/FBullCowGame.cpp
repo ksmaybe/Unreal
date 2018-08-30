@@ -1,4 +1,5 @@
 #include "FBullCowGame.h"
+#include <cctype>
 
 
 FBullCowGame::FBullCowGame()
@@ -39,6 +40,10 @@ bool FBullCowGame::IsGameWon() const
 
 bool FBullCowGame::CheckGuessValidity(FString& word) const
 {
+	for (int i=0;i<word.length();i++)
+	{
+		if (std::isalpha(word[i]) == false) return false;
+	}
 	return (word.length()==MyHiddenWord.length());
 }
 

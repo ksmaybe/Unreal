@@ -35,12 +35,20 @@ void PlayGame()
 	{
 		FString Guess= GetGuess();          // get guess
 		 // submit guess to game and receive counts
-		FBullCowCount BCCount = BCGame.SubmitGuess(Guess);
-		// print number of bulls and cows
-		std::cout << "Bulls = " << BCCount.Bulls<<std::endl;
-		std::cout << "Cows = " << BCCount.Cows<<std::endl
-		<<std::endl; // space between guesses
 
+		if (BCGame.CheckGuessValidity(Guess))
+		{
+			FBullCowCount BCCount = BCGame.SubmitGuess(Guess);
+			// print number of bulls and cows
+			std::cout << "Bulls = " << BCCount.Bulls << std::endl;
+			std::cout << "Cows = " << BCCount.Cows << std::endl
+				<< std::endl;
+		} // space between guesses
+		else
+		{
+			std::cout << "Invalid input, please try again." << std::endl;
+			i--;
+		}
 	}
 }
 // TODO summarise game

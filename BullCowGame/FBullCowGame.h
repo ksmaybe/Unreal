@@ -16,6 +16,7 @@ class FBullCowGame
 public:
 	FBullCowGame();
 	void Reset();
+	int32 GetHiddenWordLength() const;
 	int32 GetMaxTries() const;
 	int32 GetCurrentTry() const;
 	bool IsGameWon() const;

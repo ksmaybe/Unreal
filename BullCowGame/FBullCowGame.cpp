@@ -38,13 +38,10 @@ bool FBullCowGame::IsGameWon() const
 	return false;
 }
 
-bool FBullCowGame::CheckGuessValidity(FString& word) const
+EWordStatus FBullCowGame::CheckGuessValidity(FString& word) const
 {
-	for (int i=0;i<word.length();i++)
-	{
-		if (std::isalpha(word[i]) == false) return false;
-	}
-	return (word.length()==MyHiddenWord.length());
+
+	return EWordStatus::OK;
 }
 
 // receives a valid guess, increments turn, and returns count

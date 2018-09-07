@@ -30,9 +30,9 @@ bool FBullCowGame::IsGameWon() const
 	return false;
 }
 
-bool FBullCowGame::CheckGuessValidity(FString& word) const
+EWordStatus FBullCowGame::CheckGuessValidity(FString& word) const
 {
-	return (word.length()==MyHiddenWord.length());
+	return EWordStatus::OK;
 }
 
 // receives a valid guess, increments turn, and returns count
